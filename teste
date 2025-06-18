@@ -1,1 +1,77 @@
+#include <stdio.h>
 
+int main(){
+	//O comando char é usado para declarar variáveis que armazenam carateres individuais, sendo a base para criação de strings, e aqui será usado para armazenar alguns dados das cartas.
+	char estado[20], codigodacarta[20], nomedacidade[20];
+	//Agora, o comando int que vai ser utilizado armazena valores de números inteiro.
+	int populacao, npt;
+	//Por fim, será usado o float, um comando que armazena números quebrados (números com vírgulas).
+	float km, pib;
+		
+	//O comando printf serve apenas para mostrar o conteúdo  que está descrito entre as aspas.
+	//E o comando scanf é usado para
+	printf("primeira carta \n");
+	
+	
+	printf("digite o seu estado: \n");
+	scanf("%s", &estado);
+	
+	printf("digite o código da carta: \n");
+	scanf("%s", &codigodacarta);
+	
+	printf("digite o nome da cidade: \n");
+	scanf("%s", &nomedacidade);
+	
+	printf("digite a população: \n");
+	scanf("%d", &populacao);
+	
+	printf("digite o número de pontos turísticos: \n");
+	scanf("%d", &npt);
+	
+	printf("digite a área em km²: \n");
+	scanf("%f", &km);
+	
+	printf("digite o PIB: \n");
+	scanf("%f", &pib);
+	
+	
+	printf("Estado: %s\n", estado);
+	printf("Seu código da carta é:%s\n", codigodacarta);
+	printf("Cidade:%s\n", nomedacidade);
+	printf("População:%d\n", populacao);
+	printf("Pontos Turísticos:%d\n", npt);
+	printf("Área(km²):%f\n", km);
+	printf("PIB:%f\n", pib);
+	
+	printf("Segunda carta \n");
+	
+	printf("digite o seu estado: \n");
+	scanf("%s", &estado);
+	
+	printf("digite o código da carta: \n");
+	scanf("%s", &codigodacarta);
+	
+	printf("digite o nome da cidade: \n");
+	scanf("%s", &nomedacidade);
+	
+	printf("digite a população: \n");
+	scanf("%d", &populacao);
+	
+	printf("digite o número de pontos turísticos: \n");
+	scanf("%d", &npt);
+	
+	printf("digite a área em km²: \n");
+	scanf("%f", &km);
+	
+	printf("digite o PIB: \n");
+	scanf("%f", &pib);
+	
+	
+	printf("Estado: %s\n", estado);
+	printf("Seu código da carta é:%s\n", codigodacarta);
+	printf("Cidade:%s\n", nomedacidade);
+	printf("População:%d\n", populacao);
+	printf("Pontos Turísticos:%d\n", npt);
+	printf("Área(km²):%f\n", km);
+	printf("PIB:%f\n", pib);
+}
