@@ -1,15 +1,10 @@
 #include <stdio.h>
 
 int main(){
-	//O comando char é usado para declarar variáveis que armazenam carateres individuais, sendo a base para criação de strings, e aqui será usado para armazenar alguns dados das cartas.
 	char estado[20], codigodacarta[20], nomedacidade[20];
-	//Agora, o comando int que vai ser utilizado armazena valores de números inteiro.
-	int populacao, npt;
-	//Por fim, será usado o float, um comando que armazena números quebrados (números com vírgulas).
-	float km, pib;
+	int populacao1, npt, populacao2;
+	float km1, pib1, cdp1, cpc1, km2, pib2, cdp2, cpc2;
 		
-	//O comando printf serve apenas para mostrar o conteúdo  que está descrito entre as aspas.
-	//E o comando scanf é usado para
 	printf("primeira carta \n");
 	
 	
@@ -23,25 +18,30 @@ int main(){
 	scanf("%s", &nomedacidade);
 	
 	printf("digite a população: \n");
-	scanf("%d", &populacao);
+	scanf("%d", &populacao1);
 	
 	printf("digite o número de pontos turísticos: \n");
 	scanf("%d", &npt);
 	
 	printf("digite a área em km²: \n");
-	scanf("%f", &km);
+	scanf("%f", &km1);
 	
 	printf("digite o PIB: \n");
-	scanf("%f", &pib);
+	scanf("%f", &pib1);
+	
+	cdp1 = pib1 / km1;
+	cpc1 = pib1 / populacao1;
 	
 	
 	printf("Estado: %s\n", estado);
 	printf("Seu código da carta é:%s\n", codigodacarta);
 	printf("Cidade:%s\n", nomedacidade);
-	printf("População:%d\n", populacao);
+	printf("População:%d\n", populacao1);
 	printf("Pontos Turísticos:%d\n", npt);
-	printf("Área(km²):%f\n", km);
-	printf("PIB:%f\n", pib);
+	printf("Área(km²):%f\n", km1);
+	printf("PIB:%f\n", pib1);
+	printf("Densidade populacioanl:%f\n", cdp1);
+	printf("PIB per capita:%f\n", cpc1);
 	
 	printf("Segunda carta \n");
 	
@@ -55,23 +55,27 @@ int main(){
 	scanf("%s", &nomedacidade);
 	
 	printf("digite a população: \n");
-	scanf("%d", &populacao);
+	scanf("%d", &populacao2);
 	
 	printf("digite o número de pontos turísticos: \n");
 	scanf("%d", &npt);
 	
 	printf("digite a área em km²: \n");
-	scanf("%f", &km);
+	scanf("%f", &km2);
 	
 	printf("digite o PIB: \n");
-	scanf("%f", &pib);
+	scanf("%f", &pib2);
 	
+	cdp2 = pib2 / km2;
+	cpc2 = pib2 / populacao2;
 	
 	printf("Estado: %s\n", estado);
 	printf("Seu código da carta é:%s\n", codigodacarta);
 	printf("Cidade:%s\n", nomedacidade);
-	printf("População:%d\n", populacao);
+	printf("População:%d\n", populacao2);
 	printf("Pontos Turísticos:%d\n", npt);
-	printf("Área(km²):%f\n", km);
-	printf("PIB:%f\n", pib);
+	printf("Área(km²):%f\n", km2);
+	printf("PIB:%f\n", pib2);
+	printf("Densidade populacional:%f\n", cdp2);
+	printf("PIB per capita:%f\n", cpc2);
 }
