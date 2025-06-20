@@ -2,9 +2,10 @@
 
 int main(){
 	char estado[20], codigodacarta[20], nomedacidade[20];
-	int populacao1, npt, populacao2;
-	float km1, pib1, cdp1, cpc1, km2, pib2, cdp2, cpc2;
-		
+	int npt1, npt2;
+	float km1, pib1, cdp1, cpc1, km2, pib2, cdp2, cpc2, SP;
+	unsigned long int populacao1, populacao2;
+	
 	printf("primeira carta \n");
 	
 	
@@ -21,7 +22,7 @@ int main(){
 	scanf("%d", &populacao1);
 	
 	printf("digite o número de pontos turísticos: \n");
-	scanf("%d", &npt);
+	scanf("%d", &npt1);
 	
 	printf("digite a área em km²: \n");
 	scanf("%f", &km1);
@@ -29,7 +30,7 @@ int main(){
 	printf("digite o PIB: \n");
 	scanf("%f", &pib1);
 	
-	cdp1 = pib1 / km1;
+	cdp1 = populacao1 / km1;
 	cpc1 = pib1 / populacao1;
 	
 	
@@ -37,7 +38,7 @@ int main(){
 	printf("Seu código da carta é:%s\n", codigodacarta);
 	printf("Cidade:%s\n", nomedacidade);
 	printf("População:%d\n", populacao1);
-	printf("Pontos Turísticos:%d\n", npt);
+	printf("Pontos Turísticos:%d\n", npt1);
 	printf("Área(km²):%f\n", km1);
 	printf("PIB:%f\n", pib1);
 	printf("Densidade populacioanl:%f\n", cdp1);
@@ -58,7 +59,7 @@ int main(){
 	scanf("%d", &populacao2);
 	
 	printf("digite o número de pontos turísticos: \n");
-	scanf("%d", &npt);
+	scanf("%d", &npt1);
 	
 	printf("digite a área em km²: \n");
 	scanf("%f", &km2);
@@ -66,16 +67,38 @@ int main(){
 	printf("digite o PIB: \n");
 	scanf("%f", &pib2);
 	
-	cdp2 = pib2 / km2;
+	cdp2 = populacao2 / km2;
 	cpc2 = pib2 / populacao2;
 	
 	printf("Estado: %s\n", estado);
 	printf("Seu código da carta é:%s\n", codigodacarta);
 	printf("Cidade:%s\n", nomedacidade);
 	printf("População:%d\n", populacao2);
-	printf("Pontos Turísticos:%d\n", npt);
+	printf("Pontos Turísticos:%d\n", npt2);
 	printf("Área(km²):%f\n", km2);
 	printf("PIB:%f\n", pib2);
 	printf("Densidade populacional:%f\n", cdp2);
 	printf("PIB per capita:%f\n", cpc2);
+	
+	int RP, RNPT, RKM, RPIB, RCDP, RCPC, RSP;
+	float SP1, SP2;
+	
+	RP = populacao1 > populacao2;
+	RNPT = npt1 > npt2;
+	RKM = km1 > km2;
+	RPIB = pib1 > pib2;
+	RCDP = cdp1 < cdp2;
+	RCPC = cpc1 > cpc2;
+	SP1 = (populacao1 + npt1 + km1 + pib1 + cpc1) / cdp1;
+	SP2 = (populacao2 + npt2 + km2 + pib2 + cpc2) / cdp2;
+	RSP = SP1 > SP2;
+	
+	printf("Comparação de cartas:\n");
+	printf("população: %d\n", RP);
+	printf("Pontos turísticos: %d\n", RNPT);
+	printf("Área(km²) :%d\n", RKM);
+	printf("PIB: %d\n", RPIB);
+	printf("Densidade Populacional:%d\n", RCDP);
+	printf("PIB per capita:%d\n", RCPC);
+	printf("SUPER PODER! %f\n", RSP);
 }
